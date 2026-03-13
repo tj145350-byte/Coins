@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title> Toggle Coin Toss Timer </title>
+
+    <style>
+        .flip{
+            animation: flip 2s ease-in;
+            color: blue
+        }
+
+        @keyframes flip{
+            0% {transform: rotatex(0deg);}
+            50% {transform: rotatex(180deg);}
+            100% {transform: rotatex(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <h1>Toggle Coin Toss Timer</h1>
+    <button id="starstopButtonID">Stop/Start</button>
+        <br>
+
+        <img id="coinImage" src="images/tailsTp.png" alt="Coin Tails" height="120">
+        <br><br>
+        
+        <!--Display Running Costs-->
+        <div id="coinResults">
+            <p id = "totoalID">Total: 0</p>
+            <p id="HeadsID">Heads: 0</p>
+           <p id=""TailsID">Tails: 0</p>p>
+        </div>
+        <br>
+        <br>
+
+        <script>
+            //reference the NTML elements used in our script
+            const startStopButton = document.getElementById("startStopBtn");
+            const coinImg = document.getElementById("coinImgID");
+            const totalPg = document.getElementById("totalPgID");
+            const headsPg = document.getElementById("headsPgID");
+            const tailsPg = document.getElementById("tailsPgID");
+
+            //Add event listeners
+            startStop.addEventListener("click",startStopTimer)  //start or stop the coin timer
+            
+            //starting values
+            total = 0; //total number of coin tosses
+            heads = 0; //number of heads
+            tails = 0; //heads
+
+            //start with timer off
+            timerID = null; //indicates timer off 
+
+            function startStopTimer()
+            //if timer is stopped -> start it
+            //if timer is started -> stop it
+            //timerID =null -> indicates it is stopped
+
+            if (timerID == null){
+               timerID = setInterval(tossCoin, 1500) //toss the coin every 1.5 sec.
+            }
+            else {
+                //need to stop the timer
+                clearInterval(timerID);
+                timerID = null; //ensure we have an indicator that the timer is now stopped
+            }
+
+            function tossCoin(){
+                //toss the coin
+            
+            
+            }
+
+</script>
+
+</body>
+</html>
